@@ -1,0 +1,443 @@
+/* importación de google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+/* --- reseteo de variables --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-principal: #F7F7F7;      
+    --verde-esmeralda: #2E8B57;  
+    --verde-hover: #246B43;      
+    --amarillo-mostaza: #FFD700;  
+    --marron-claro: #8B4513;     
+    --texto-principal: #333333;  
+    --texto-secundario: #666666;
+    --blanco: #FFFFFF;
+    --borde-suave: #E0E0E0;
+    --sombra-card: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--texto-principal);
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--marron-claro);
+    margin-bottom: 0.75rem;
+}
+
+p {
+    color: var(--texto-principal);
+    margin-bottom: 0.5rem;
+}
+
+header {
+    background-color: var(--blanco);
+    border-bottom: 3px solid var(--verde-esmeralda);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+header img {
+    max-height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--texto-principal);
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--verde-esmeralda);
+    background-color: rgba(46, 139, 87, 0.08);
+}
+
+#contador-carrito {
+    background-color: var(--amarillo-mostaza);
+    color: var(--texto-principal);
+    font-weight: 700;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+main {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    gap: 2rem;
+}
+
+.contenido-principal {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.caja-bienvenida {
+    background: linear-gradient(135deg, rgba(46, 139, 87, 0.1) 0%, rgba(255, 215, 0, 0.15) 100%), var(--blanco);
+    border-left: 6px solid var(--verde-esmeralda);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: var(--sombra-card);
+}
+
+.caja-bienvenida h2 {
+    font-size: 2.2rem;
+    color: var(--marron-claro);
+    margin-bottom: 0.5rem;
+}
+
+.caja-bienvenida p {
+    font-size: 1.1rem;
+    color: var(--texto-secundario);
+}
+
+.productos-destacados {
+    background-color: var(--blanco);
+    padding: 1.8rem;
+    border-radius: 10px;
+    box-shadow: var(--sombra-card);
+    border: 1px solid var(--borde-suave);
+}
+
+.productos-destacados h2 {
+    border-bottom: 2px solid var(--amarillo-mostaza);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.productos-destacados ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.2rem;
+}
+
+.productos-destacados li {
+    background-color: var(--bg-principal);
+    border: 1px solid var(--borde-suave);
+    border-radius: 8px;
+    padding: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+    color: var(--texto-principal);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.productos-destacados li:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-card);
+    border-color: var(--verde-esmeralda);
+}
+
+.blog-reciente {
+    background-color: var(--blanco);
+    padding: 1.8rem;
+    border-radius: 10px;
+    box-shadow: var(--sombra-card);
+    border: 1px solid var(--borde-suave);
+}
+
+.blog-reciente h2 {
+    border-bottom: 2px solid var(--amarillo-mostaza);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.blog-reciente ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.blog-reciente li a {
+    text-decoration: none;
+    color: var(--verde-esmeralda);
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+    background-color: var(--bg-principal);
+    width: 100%;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.blog-reciente li a:hover {
+    background-color: var(--verde-esmeralda);
+    color: var(--blanco);
+}
+
+sidebar, aside {
+    background-color: var(--blanco);
+    padding: 1.8rem;
+    border-radius: 10px;
+    box-shadow: var(--sombra-card);
+    border: 1px solid var(--borde-suave);
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+sidebar h2, aside h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--verde-esmeralda);
+    padding-bottom: 0.4rem;
+}
+
+#cart-list {
+    min-height: 80px;
+    background-color: var(--bg-principal);
+    border: 1px dashed var(--borde-suave);
+    border-radius: 6px;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: var(--texto-secundario);
+}
+
+button {
+    font-family: 'Montserrat', 
+    sans-serif; font-weight: 600; 
+    border: none; border-radius: 6px; 
+    padding: 0.75rem 1.2rem; 
+    cursor: pointer; 
+    transition: background-color 0.25s ease, 
+    transform 0.1s ease; 
+    width: 100%; 
+    font-size: 0.95rem; 
+} 
+button:active { 
+    transform: scale(0.98); 
+} 
+#Comprar, button.btn-principal { 
+    background-color: var(--verde-esmeralda); 
+    color: var(--blanco); 
+} 
+#Comprar:hover, button.btn-principal:hover { 
+    background-color: var(--verde-hover); 
+} #vaciar-carrito, button.btn-secundario { 
+    background-color: #E74C3C !important; 
+    color: var(--blanco) !important; 
+    margin-bottom: 0.5rem; 
+} 
+#vaciar-carrito:hover, button.btn-secundario:hover { 
+    background-color: #C0392B !important; 
+}
+
+#vaciar-carrito, button[onclick\*="vaciarCarrito"], button.btn-secundario { 
+    background-color: #E74C3C; color: var(--blanco); 
+    margin-bottom: 0.5rem; } 
+    
+#vaciar-carrito:hover, button[onclick\*="vaciarCarrito"]:hover, button.btn-secundario:hover { 
+    background-color: #C0392B; 
+}
+
+.error {
+    background-color: #F8D7DA;
+    color: #721C24;
+    border: 1px solid #F5C6CB;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.exito, .correcto {
+    background-color: #D4EDDA;
+    color: #155724;
+    border: 1px solid #C3E6CB;
+    padding: 0.8rem 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+footer {
+    background-color: var(--texto-principal);
+    color: var(--blanco);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+footer p {
+    color: #CCCCCC;
+}
+
+@media (max-width: 850px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+}
+
+
+/*ajustes para celulares y otros dispositivos */
+
+/* 1. Prevenir desbordes horizontales globales */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* 2. Ajustes para Tablets y pantallas medianas (máximo 992px) */
+@media (max-width: 992px) {
+  /* La grilla principal colapsa a 1 columna (el contenido arriba y el carrito abajo) */
+  main {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+  }
+
+  aside {
+    width: 100%;
+    order: 2;
+  }
+
+  /* El Header distribuye logo y navegación centrados */
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  /* Encabezado del panel de administración */
+  .admin-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .admin-header nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Tablas de mantenedores con scroll táctil suave para no romper la pantalla */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+}
+/* 3. Ajustes específicos para Teléfonos Móviles (máximo 600px) */
+@media (max-width: 600px) {
+  header img {
+    height: 40px;
+    margin: 0 auto;
+  }
+
+  nav {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  nav a, nav span {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  #contador-carrito {
+    margin-top: 0.3rem;
+    font-size: 0.95rem;
+  }
+
+  /* Grilla de productos se adapta a 1 columna completa */
+  #productos-destacados-lista,
+  .grid-productos-destacados,
+  .grid-productos,
+  .productos {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  .product, .producto-card {
+    padding: 0.8rem;
+  }
+
+  /* Formularios ocupan el 100% del ancho del dispositivo */
+  form, #registro, #iniciosesion, #form-contacto {
+    max-width: 100%;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* Evita que Safari en iOS haga zoom involuntario al tocar los inputs */
+  .campo input, .campo select, .campo textarea {
+    font-size: 16px;
+  }
+
+  /* Botones grandes y cómodos para tocar con el pulgar */
+  button, .btn-principal, .btn-secundario, #Comprar, #comprar {
+    width: 100%;
+    padding: 0.8rem 1rem;
+  }
+
+  .admin-header nav a,
+  .admin-header nav button {
+    width: 100%;
+    margin-bottom: 0.3rem;
+  }
+}
