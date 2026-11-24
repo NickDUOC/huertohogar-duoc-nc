@@ -1,3 +1,8 @@
+# para iniciar
+
+terminal 1: en carpeta backend ejecutar `./mvnw spring-boot:run`
+terminal 2: en carpeta frontend ejecutar `npm run dev`
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

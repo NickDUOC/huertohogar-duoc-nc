@@ -1,0 +1,15 @@
+/Users/nick/huertohogar-duoc-nc-ev3/backend/src/main/java/cl/duoc/ep3/BackendEp3Application.java
+/Users/nick/huertohogar-duoc-nc-ev3/backend/src/main/java/cl/duoc/ep3/config/DatosIniciales.java
+/Users/nick/huertohogar-duoc-nc-ev3/backend/src/main/java/cl/duoc/ep3/config/OpenApiConfig.java
+/Users/nick/huertohogar-duoc-nc-ev3/backend/src/main/java/cl/duoc/ep3/controller/AuthController.java
+/Users/nick/huertohogar-duoc-nc-ev3/backend/src/main/java/cl/duoc/ep3/controller/ProductoController.java
+/Users/nick/huertohogar-duoc-nc-ev3/backend/src/main/java/cl/duoc/ep3/dto/AuthResponse.java
+/Users/nick/huertohogar-duoc-nc-ev3/backend/src/main/java/cl/duoc/ep3/dto/LoginRequest.java
+/Users/nick/huertohogar-duoc-nc-ev3/backend/src/main/java/cl/duoc/ep3/model/Producto.java
+/Users/nick/huertohogar-duoc-nc-ev3/backend/src/main/java/cl/duoc/ep3/model/Usuario.java
+/Users/nick/huertohogar-duoc-nc-ev3/backend/src/main/java/cl/duoc/ep3/repository/ProductoRepository.java
+/Users/nick/huertohogar-duoc-nc-ev3/backend/src/main/java/cl/duoc/ep3/repository/UsuarioRepository.java
+/Users/nick/huertohogar-duoc-nc-ev3/backend/src/main/java/cl/duoc/ep3/security/JwtFilter.java
+/Users/nick/huertohogar-duoc-nc-ev3/backend/src/main/java/cl/duoc/ep3/security/JwtService.java
+/Users/nick/huertohogar-duoc-nc-ev3/backend/src/main/java/cl/duoc/ep3/security/SecurityConfig.java
+/Users/nick/huertohogar-duoc-nc-ev3/backend/src/main/java/cl/duoc/ep3/service/ProductoService.java
